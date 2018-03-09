@@ -1,0 +1,18 @@
+@charset "utf-8";
+.btn{ background: #04be02; display: inline-block; border: 0; color: #fff; font-size: px(32); @include height(88); border-radius: 3px; box-sizing: border-box; padding: 0 px(25); text-align: center; cursor: pointer;
+  &:active{ background: #04ab02 }
+  /*取消*/
+  &.btn-cancel{ background: #ddd;
+    &:active{ background: #ccc; }
+  }
+  /*disabled*/
+  &.btn-disabled{ background: #ccc; color: #f0f0f0; cursor: not-allowed;
+    &:active{ background: #ccc; }
+  }
+  /*边框*/
+  &.btn-border{ background: #fff; color: #04be02; border: 1px solid #04be02;
+    &:active{ border-color: #04ab02; color: #04ab02 }
+  }
+  /*块状*/
+  &.btn-block{ width: 100%; display: block; }
+}

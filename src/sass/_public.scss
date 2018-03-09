@@ -1,0 +1,30 @@
+@charset "utf-8";
+@function px($n) {
+  @return $n / 75 + rem;
+}
+@function bg-size($w,$h) {
+  @return $w / 75 + rem $h / 75 + rem;
+}
+@mixin font-dpr($font-size) {
+  font-size: $font-size;
+  [data-dpr="2"] &{ font-size: $font-size * 2; }
+  [data-dpr="3"] &{ font-size: $font-size * 3; }
+}
+@mixin clear() { display: block; content: '.'; clear: both; height: 0; line-height: 0; visibility: hidden; }
+@mixin height($h) { height: px($h); line-height: px($h); }
+html, body, div, span, table, tbody, tr, th, td, em, img, strong, h1, h2, h3, h4, h5, h6, p, a, dl, dt, dd, ol, ul, li, form, label, input{ margin: 0; padding: 0; list-style: none; outline: none; }
+h1, h2, h3, h4, h5, h6, b{ font-weight: 400; }
+a, img{ border: none }
+input, select, textarea, button{
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+a, button, input, label, select {
+  -webkit-tap-highlight-color: transparent;
+}
+.clearfix:after{ @include clear(); }
+body{ font-family: Arial, "Microsoft YaHei", "simsun"; color: #666; font-size: px(28);
+}
+a{ color: #666; font-size: px(28); text-decoration: none }
+.container{ }
