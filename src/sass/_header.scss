@@ -1,0 +1,10 @@
+@charset "utf-8";
+.header{ position: relative; @include height(88); text-align: center;background: #04be02;color: #fff;
+  h1{font-size: px(36);display: block }
+  .back{ display: block; width: px(88);position: absolute;
+    &:after{
+      content: " "; display: inline-block; border-color: #fff; border-style: solid; height: 12px; width: 12px; border-width: 2px 2px 0 0; transform: rotate(-135deg); vertical-align: middle;
+    }
+  }
+  .right{ display: block; width: px(88);position: absolute;right: 0;top:0 }
+}

@@ -1,6 +1,6 @@
 <!--Created by 337547038 on 2018/3/9.-->
 <template>
-    <button class="btn" :disabled="disabled" :class="{'btn-disabled':disabled}">
+    <button class="btn" :disabled="disabled" :class="{'btn-disabled':disabled}" @click="_click">
         <slot></slot>
     </button>
 </template>
@@ -17,7 +17,11 @@
             }
         },
         components: {},
-        methods: {},
+        methods: {
+            _click(e){
+                this.$emit('click', e);
+            }
+        },
         computed: {},
         mounted(){
         },

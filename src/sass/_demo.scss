@@ -1,16 +1,16 @@
 @charset "utf-8";
 @import "public";
-.container{ padding: 0 px(20) }
-.demo{ position: relative;
-  .list{ padding: 15px;
-    li{ line-height: 30px; list-style: disc }
+.demo{ position: relative; padding: px(20);
+  .list{ padding: px(20);
+    li{ line-height: px(88); border-bottom: 1px solid #f8f8f8; position: relative;
+      .right{ right: 0; top: 0; position: absolute; }
+    }
   }
-  pre{ background: #f8f8f8; padding: 10px; margin: 10px 0; line-height: 25px; white-space: pre-wrap; word-wrap: break-word; }
-  .table-1{ width: 100%;
-    td{ line-height: 25px; padding: 5px 10px; border: 1px solid #ddd }
-    th{ line-height: 25px; padding: 5px 10px; border: 1px solid #ddd }
+  pre{ background: #f8f8f8; padding: px(10); margin: px(10) 0; line-height: px(40); white-space: pre-wrap; word-wrap: break-word; }
+  h1{ margin-bottom: px(15); }
+  h2{ font-size: px(36); margin: 10px 0; font-weight: 700 }
+  h3{ font-size: px(32); margin: 10px 0; font-weight: 700 }
+  .table-1{ width: 100%; border-spacing: 0; border-collapse: collapse; border: 1px solid #ddd;
+    td, th{ border: 1px solid #ddd; padding: 5px; font-size: px(28); line-height: px(40) }
   }
-  h1{ margin-bottom: 15px; }
-  h2{ font-size: 18px; margin: 10px 0; font-weight: 700 }
-  h3{ font-size: 16px; margin: 10px 0; font-weight: 700 }
 }

@@ -5,4 +5,7 @@ module.exports = {
     index: require('./index'),
     button: require('./button'),
     header: require('./header'),
+    input: require('./input'),
+    radio: require('./radio'),
+    checkbox: require('./checkbox'),
 }

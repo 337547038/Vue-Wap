@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+/*注册个公共头部*/
+import Header from '../src/components/header/index'
+Vue.component('comHeader', Header);
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

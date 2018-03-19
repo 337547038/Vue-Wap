@@ -22,8 +22,20 @@
                         link: '/button'
                     },
                     {
+                        title: 'Checkbox',
+                        link: '/checkbox'
+                    },
+                    {
                         title: 'Header',
                         link: '/header'
+                    },
+                    {
+                        title: 'Input',
+                        link: '/input'
+                    },
+                    {
+                        title: 'Radio',
+                        link: '/radio'
                     }
                 ]
             }
