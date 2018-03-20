@@ -1,4 +1,12 @@
 @charset "utf-8";
-.checkbox-box{ display: inline-block; vertical-align: middle; margin-right: 10px;
-  input{ display: inline-block; vertical-align: middle }
+.checkbox-box{ display: inline-block; vertical-align: middle; margin-right: 10px; overflow: hidden;
+  input{ display: none; }
+  span{ display: inline-block; vertical-align: middle }
+  .checkbox-inner{ border: 1px solid #04ab02; width: 12px; height: 12px; text-align: center; position: relative; top: -2px; }
+  &.checked{
+    .checkbox-inner:after{ content: '\2713'; display: block; line-height: 12px; color: #04ab02; font-weight: 700 }
+  }
+  &.disabled{
+    .checkbox-inner{ border-color: #999; }
+  }
 }

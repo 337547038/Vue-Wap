@@ -1,0 +1,16 @@
+@charset "utf-8";
+.switch{
+  $height: px(44);
+  display: inline-block; box-sizing: border-box; height: $height; min-width: px(88); vertical-align: middle; border-radius: px(22); background: #ccc; transition: all 1s; user-select: none; position: relative;
+  &:after{ position: absolute; width: px(36); height: px(36); left: 1px; top: 2px; border-radius: px(36); background-color: #fff; content: " ";transition: all .5s; display: inline-block }
+
+  &.switch-checked{ background-color: #04ab02;
+    .switch-inner{ text-align: left }
+    &:after{ left: auto; right: 1px; }
+  }
+  .switch-inner{ color: #fff; font-size: px(24); display: block; height: $height; line-height: $height; padding: 0 5px; box-sizing: border-box; text-align: right; font-style: normal }
+  //禁用状态
+  &.disabled{ cursor: not-allowed; background: #f3f3f3; border-color: #f3f3f3;
+    &:after{ background: #ccc }
+  }
+}

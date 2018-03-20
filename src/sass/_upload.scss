@@ -1,0 +1,16 @@
+@charset "utf-8";
+.upload{ display: inline-block; vertical-align: middle; position: relative;
+  .file{ display: inline-block; padding: 0 px(10); @include height(60); background: #04ab02; border-radius: 3px; position: relative; color: #fff; cursor: pointer;
+    input{ display: none }
+  }
+  .progress{ height: px(5); background: #666; border-radius: 2px; position: relative;
+    span{ left: 0; top: 0; position: absolute; display: block; height: px(5); background: #2d8cf0 }
+  }
+  .upload-list{ border: 1px solid #ddd;
+    li{ float: left; width: px(120); height: px(90); overflow: hidden; position: relative; margin: 5px; background: #f8f8f8;
+      img{ width: 100%; }
+      span{ left: 0; bottom: 0; position: absolute; height: 4px; background: #2d8cf0; z-index: 5 }
+    }
+  }
+  .del{ right: 0; top: 0; position: absolute; }
+}

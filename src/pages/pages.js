@@ -8,4 +8,9 @@ module.exports = {
     input: require('./input'),
     radio: require('./radio'),
     checkbox: require('./checkbox'),
+    inputNumber: require('./inputNumber'),
+    switch: require('./switch'),
+    textarea: require('./textarea'),
+    upload: require('./upload'),
+    progress: require('./progress'),
 }

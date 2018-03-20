@@ -1,9 +1,9 @@
 @charset "utf-8";
 .input-box{ position: relative;
-  .input-control{ font-size: px(28); border: 1px solid #ddd;; color: #666; box-sizing: border-box; width: 100%; padding: 0 px(10); height: px(90);
-    &:focus{ border-color: #04ab02; }
-    &.disabled{ background: #ddd; cursor: not-allowed; }
-  }
   .close-icon{ display: block; position: absolute; right: px(20); top: 0; width: px(44); @include height(90); text-align: center; cursor: pointer; font-size: px(30) }
   .eye-icon{ display: block; position: absolute; right: px(80); top: 0; width: px(44); @include height(90); text-align: center; cursor: pointer; font-size: px(50) }
+}
+.input-control{ font-size: px(28); border: 1px solid #ddd;; color: #666; box-sizing: border-box; width: 100%; padding: 0 px(10); height: px(90);
+  &:focus{ border-color: #04ab02; }
+  &.disabled{ background: #ddd; cursor: not-allowed; }
 }

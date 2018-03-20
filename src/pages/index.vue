@@ -34,8 +34,28 @@
                         link: '/input'
                     },
                     {
+                        title: 'inputNumber',
+                        link: '/inputNumber'
+                    },
+                    {
+                        title: 'Progress',
+                        link: '/progress'
+                    },
+                    {
                         title: 'Radio',
                         link: '/radio'
+                    },
+                    {
+                        title: 'Switch',
+                        link: '/switch'
+                    },
+                    {
+                        title: 'Textarea',
+                        link: '/textarea'
+                    },
+                    {
+                        title: 'Upload',
+                        link: '/upload'
                     }
                 ]
             }

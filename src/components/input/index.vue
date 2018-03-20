@@ -1,4 +1,5 @@
 <!--Created by 337547038 on 2018/3/18.-->
+<!-- copy on pc-->
 <!--example
 <Input placeholder="双向绑定" v-model="value"></Input>-->
 <template>
