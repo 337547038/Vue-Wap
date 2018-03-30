@@ -31,7 +31,7 @@
             </div>
             <h2>Circle</h2>
             <h3>1、基本用法</h3>
-            <div>
+            <div class="progress-bar">
                 <div class="inline">
                     <ProgressBar :value="0" :radius="100" :border="10" color="#ddd" borderColor="#108ee9"
                                  type="circle"></ProgressBar>
@@ -57,7 +57,7 @@
                 <div class="inline">
                     <ProgressBar :value="80" :radius="100" :border="10" color="#ddd" borderColor="#108ee9" type="circle"
                                  :showText="showText">
-                        <div class="content">这里是自定内容，不显示进度数字</div>
+                        <div class="content">这里是自定内容</div>
                     </ProgressBar>
                 </div>
             </div>
@@ -150,8 +150,9 @@
         filters: {}
     }
 </script>
-<style scoped>
+<style>
     .demo-margin{ margin-bottom: 30px }
-    .inline{ display: inline-block; overflow: hidden; }
+    .progress-bar{ display: flex; flex-flow: wrap }
+    .inline{margin: 10px;}
     .content{ position: absolute; text-align: center; top: 30px; width: 60%; left: 20% }
 </style>

@@ -1,0 +1,43 @@
+@charset "utf-8";
+.picker{
+  .mask{ position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, .6); z-index: 100; }
+  .picker-content{ position: fixed; left: 0; bottom: 0; right: 0; background: #fff; z-index: 101; }
+  /*取消确定按钮*/
+  .picker-control{ @include height(80); border-bottom: 1px solid #e5e5e5; display: flex; padding: 0 px(20); box-sizing: border-box;
+    h3{ flex: 2; display: block; text-align: center;font-size: px(32); }
+    a{ display: block;
+      &:last-child{ text-align: right; color: #04ab02 }
+    }
+  }
+  .picker-group{ display: flex; position: relative; overflow: hidden;
+    .picker-border{ left: 0; top: 50%; position: absolute; height: px(60); border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; width: 100%; box-sizing: border-box; }
+    .picker-item{ width: 100%; position: relative;
+      .picker-mask{ position: absolute; left: 0; top: 0; height: 100%; width: 100%; z-index: 3; background: linear-gradient(180deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .6)), linear-gradient(0deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .6)); background-repeat: no-repeat; background-position: top, bottom; /*background-size: 100% 102px;*/
+        /*两个线性过度叠在一起，通过size设定显示的高度*/
+      }
+      li{ @include height(60); text-align: center;
+        &.disabled{ font-style: italic; }
+      }
+    }
+  }
+}
+.fade-enter-active{ animation: fadeIn .5s }
+.fade-leave-active{ animation: fadeOut .5s }
+@keyframes fadeIn{
+  0%{ opacity: 0; }
+  100%{ opacity: 1; }
+}
+@keyframes fadeOut{
+  0%{ opacity: 1; }
+  100%{ opacity: 0; }
+}
+.slide-enter-active{ animation: fadeUp .5s }
+.slide-leave-active{ animation: fadeDown .5s }
+@keyframes fadeUp{
+  0%{ opacity: .6; transform: translateY(100%); }
+  100%{ opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown{
+  0%{ opacity: 1; transform: translateY(0); }
+  100%{ opacity: .6; transform: translateY(100%); }
+}

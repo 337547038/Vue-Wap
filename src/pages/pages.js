@@ -13,4 +13,5 @@ module.exports = {
     textarea: require('./textarea'),
     upload: require('./upload'),
     progress: require('./progress'),
+    picker: require('./picker'),
 }

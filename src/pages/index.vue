@@ -38,6 +38,10 @@
                         link: '/inputNumber'
                     },
                     {
+                        title: 'Picker',
+                        link: '/picker'
+                    },
+                    {
                         title: 'Progress',
                         link: '/progress'
                     },
