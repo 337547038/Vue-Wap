@@ -8,4 +8,5 @@ module.exports = {
     input: require('./input'),
     radio: require('./radio'),
     checkbox: require('./checkbox'),
+    list: require('./list'),
 }

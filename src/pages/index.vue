@@ -34,6 +34,10 @@
                         link: '/input'
                     },
                     {
+                        title: 'List',
+                        link: '/list'
+                    },
+                    {
                         title: 'Radio',
                         link: '/radio'
                     }
