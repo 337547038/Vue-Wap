@@ -11,26 +11,16 @@
             <h3>1、基本使用</h3>
             <p>v-model的值可以是布尔值或是字符，点击后选中返回true，不选中返回false</p>
             <p>为true或是任意字符时为勾选状态</p>
-            <div>
-                <Checkbox v-model="v1">true</Checkbox>
-                （{{v1}}）
+            <div class="list">
+                <ul>
+                    <li><Checkbox v-model="v1">true</Checkbox><span class="right">{{v1}}</span> </li>
+                    <li><Checkbox v-model="v2">false</Checkbox><span class="right">{{v2}}</span></li>
+                    <li><Checkbox text="数字字符" v-model="v3"></Checkbox><span class="right">{{v3}}</span></li>
+                    <li><Checkbox text="空值" v-model="v4"></Checkbox><span class="right">{{v4}}</span></li>
+                    <li><Checkbox text="禁用" :disabled='true' v-model="v5"></Checkbox><span class="right">{{v5}}</span></li>
+                </ul>
             </div>
-            <div>
-                <Checkbox v-model="v2">false</Checkbox>
-                （{{v2}}）
-            </div>
-            <div>
-                <Checkbox text="数字字符" v-model="v3"></Checkbox>
-                （{{v3}}）
-            </div>
-            <div>
-                <Checkbox text="空值" v-model="v4"></Checkbox>
-                （{{v4}}）
-            </div>
-            <div>
-                <Checkbox text="禁用" :disabled='true' v-model="v5"></Checkbox>
-                （{{v5}}）
-            </div>
+
             <h3>2、组使用</h3>
             <p>勾选的值：{{group}}</p>
             <pre>&lt;CheckboxGroup :data="groupDate" v-model="group">&lt;/CheckboxGroup></pre>
