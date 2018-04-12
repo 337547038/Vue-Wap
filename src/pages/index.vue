@@ -46,6 +46,10 @@
                         link: '/inputNumber'
                     },
                     {
+                        title: 'List',
+                        link: '/list'
+                    },
+                    {
                         title: 'Picker',
                         link: '/picker'
                     },
