@@ -23,13 +23,12 @@
                 //父组件mounted后更新了height的高度，这里将数据移动到指定位置
                 this._moveTo();
             },
-            data(){
-                //在联动时，数据变化了，下级还会保持在上一次的移动位置
-                this._moveTo();
+            value(){
+                console.log('value change');
             }
         },
         props: {
-            height: Number,//移动单位的高度
+            height:Number,//移动单位的高度
             data: Array,
             change: Function,
             value: String,//选中的值
@@ -105,10 +104,30 @@
                         break;
                     }
                 }
-                this._setIndex(index, false);
+                this._setIndex(index,false);
                 //没有默认时或是value不存在于数据数组中时index=0
             }
-
+            /*_change(index, bool){
+             const v = this.data[index].value || this.data[index];
+             if (v != this.value) {
+             this.change ? this.change(v, this.index, bool) : "";
+             }
+             },*/
+            /*_getIndex(newValue){
+             //返回选中值在data中的下标，用于设置初始值。没有初始值时默认选中第一项
+             //this.value != newValue;如果是动态加载改变value后，这里两个不相等
+             for (let i = 0; i < this.data.length; i++) {
+             let v = this.data[i].value || this.data[i];
+             if (newValue === v) {
+             return i;
+             }
+             }
+             return 0;//没有默认时或是value不存在于数据数组中
+             },
+             setTransform(newValue){
+             //移动到指定的位置，设置默认值。因li读取高度先后问题，这里由父组件调用
+             // this._setIndex(this._getIndex(newValue), false);
+             }*/
         },
         computed: {
             pickerMask(){
@@ -125,6 +144,7 @@
             }
         },
         mounted(){
+
         },
         filters: {}
     }

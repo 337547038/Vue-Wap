@@ -26,6 +26,14 @@
                         link: '/checkbox'
                     },
                     {
+                        title: 'CityPicker 城市级联',
+                        link: '/cityPicker'
+                    },
+                    {
+                        title: 'DatePicker 时间选择',
+                        link: '/datePicker'
+                    },
+                    {
                         title: 'Header',
                         link: '/header'
                     },
@@ -34,7 +42,7 @@
                         link: '/input'
                     },
                     {
-                        title: 'inputNumber',
+                        title: 'InputNumber',
                         link: '/inputNumber'
                     },
                     {
@@ -48,6 +56,10 @@
                     {
                         title: 'Radio',
                         link: '/radio'
+                    },
+                    {
+                        title: 'Select',
+                        link: '/select'
                     },
                     {
                         title: 'Switch',

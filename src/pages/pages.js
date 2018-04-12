@@ -14,4 +14,7 @@ module.exports = {
     upload: require('./upload'),
     progress: require('./progress'),
     picker: require('./picker'),
+    cityPicker: require('./cityPicker'),
+    select: require('./select'),
+    datePicker: require('./datePicker'),
 }

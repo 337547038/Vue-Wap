@@ -4,18 +4,18 @@
   .picker-content{ position: fixed; left: 0; bottom: 0; right: 0; background: #fff; z-index: 101; }
   /*取消确定按钮*/
   .picker-control{ @include height(80); border-bottom: 1px solid #e5e5e5; display: flex; padding: 0 px(20); box-sizing: border-box;
-    h3{ flex: 2; display: block; text-align: center;font-size: px(32); }
+    .picker-title{ display: block; flex: 2; text-align: center; font-size: px(32); }
     a{ display: block;
       &:last-child{ text-align: right; color: #04ab02 }
     }
   }
   .picker-group{ display: flex; position: relative; overflow: hidden;
-    .picker-border{ left: 0; top: 50%; position: absolute; height: px(60); border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; width: 100%; box-sizing: border-box; }
+    .picker-border{ left: 0; top: 50%; position: absolute; height: px(60); border-bottom: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5; width: 100%; box-sizing: border-box; transform: translateY(-50%); }
     .picker-item{ width: 100%; position: relative;
       .picker-mask{ position: absolute; left: 0; top: 0; height: 100%; width: 100%; z-index: 3; background: linear-gradient(180deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .6)), linear-gradient(0deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, .6)); background-repeat: no-repeat; background-position: top, bottom; /*background-size: 100% 102px;*/
         /*两个线性过度叠在一起，通过size设定显示的高度*/
       }
-      li{ @include height(60); text-align: center;
+      li{ @include height(60); text-align: center; overflow: hidden; box-sizing: border-box;
         &.disabled{ font-style: italic; }
       }
     }
