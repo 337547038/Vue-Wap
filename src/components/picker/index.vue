@@ -125,17 +125,19 @@
                 obj.parentNode.appendChild(clone);
                 const li = clone.querySelector('li');
                 if (li) {
-                    this.liHeight = li.offsetHeight;
+                    //this.liHeight = li.offsetHeight;//取到的是整数
+                    this.liHeight = parseFloat(window.getComputedStyle(li, null).height);//取到的精确到小数
                 }
                 obj.parentNode.removeChild(clone);
+
             }
         },
         computed: {
             /*pickerBorder(){
-                return {
-                    top: Math.floor(this.visibleCount / 2) * this.liHeight + 'px'
-                }
-            }*/
+             return {
+             top: Math.floor(this.visibleCount / 2) * this.liHeight + 'px'
+             }
+             }*/
         },
         mounted(){
             this._getDisplayHeight();

@@ -66,6 +66,10 @@
                         link: '/select'
                     },
                     {
+                        title: 'Swiper',
+                        link: '/swiper'
+                    },
+                    {
                         title: 'Switch',
                         link: '/switch'
                     },
