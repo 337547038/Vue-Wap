@@ -49,7 +49,7 @@
                 const valueNum = parseInt(value);//带单位时，这个value会是01月
                 if (index == 0) {
                     this.valueCache[0] = valueNum;
-                } else if (index == 1) {
+                } else if (index == 1 && this.type.substr(2, 1) == 'd') {
                     //只在月份改变时做联动
                     let day = new Date(this.valueCache[0], valueNum, 0);
                     let array = this._forArray(1, day.getDate(), '日');
