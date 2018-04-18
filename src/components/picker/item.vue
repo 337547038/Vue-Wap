@@ -49,7 +49,7 @@
                 this.startOffset = this.offset;
                 this.startY = touch.clientY;
             },
-            _onTouchMove(){
+            _onTouchMove(event){
                 const touch = this._getTouch(event);
                 const currentY = touch.clientY;
                 const distance = currentY - this.startY;
