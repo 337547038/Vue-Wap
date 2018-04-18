@@ -19,4 +19,5 @@ module.exports = {
     select: require('./select'),
     datePicker: require('./datePicker'),
     swiper: require('./swiper'),
+    keyboard: require('./keyboard'),
 }

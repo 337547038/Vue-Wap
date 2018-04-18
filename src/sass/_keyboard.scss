@@ -1,0 +1,9 @@
+@charset "utf-8";
+.keyboard-fixed{ position: fixed; z-index: 80; left: 0; bottom: 0; width: 100%; background: #fff; border-top: 1px solid #ddd;
+  .keyboard-control{ @include height(60); text-align: right; padding: 0 px(15) }
+  .keyboard-num{ display: flex; flex-wrap: wrap;
+    a{ display: block; border-top: 1px solid #ddd; box-sizing: border-box; width: 33.33%; text-align: center; border-right: 1px solid #ddd; @include height(80);
+      &:nth-child(3n){ border-right: 0 }
+    }
+  }
+}
