@@ -1,10 +1,24 @@
 <!--Created by 337547038 on 2018/3/29.-->
 <template>
     <div class="list-item">
-        <i :class="{['icon-'+icon]:icon}" v-if="icon"></i>
-        <h3 v-text="title"></h3>
-        <slot></slot>
-        <i class="list-arrow icon-arrow"></i>
+        <template v-if="href">
+            <router-link :to="href">
+                <i :class="{['icon-'+icon]:icon}" v-if="icon" class="list-icon"></i>
+                <div class="list-title">
+                    <slot/>
+                </div>
+                <div slot="other"></div>
+                <i class="list-arrow" v-if="arrow"></i>
+            </router-link>
+        </template>
+        <template v-else>
+            <i :class="{['icon-'+icon]:icon}" v-if="icon" class="list-icon"></i>
+            <div class="list-title">
+                <slot/>
+            </div>
+            <slot name="other"></slot>
+            <i class="list-arrow" v-if="arrow"></i>
+        </template>
     </div>
 </template>
 <script>
@@ -15,11 +29,11 @@
         },
         props: {
             icon: String,//前缀icon
-            title: String,
             arrow: {
                 type: Boolean,
                 default: true
-            }
+            },
+            href: String
         },
         mounted(){
         },

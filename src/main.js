@@ -4,6 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+/*添加插件入口*/
+import plugin from '../src/components/plugins'
+for(let i in plugin){
+  Vue.use(plugin[i].default);
+}
+
 /*注册个公共头部*/
 import Header from '../src/components/header/index'
 Vue.component('comHeader', Header);

@@ -19,4 +19,13 @@ module.exports = {
     select: require('./select'),
     datePicker: require('./datePicker'),
     swiper: require('./swiper'),
+    formItem: require('./formItem'),
+    form: require('./form'),
+    dialog: require('./dialog'),
+    loading: require('./loading'),
+    tabbar: require('./tabbar'),
+    tab: require('./tab'),
+    badge: require('./badge'),
+    pullRefreshLoading: require('./pullRefreshLoading'),
+    test: require('./test'),
 }

@@ -1,15 +1,15 @@
 <!--Created by 337547038 on 2018/4/13.-->
 <template>
-    <div class="swiper-slide" :style="style" ref="slide">
+    <div class="swiper-slide" :style="style">
         <slot/>
     </div>
 </template>
 <script>
     export default {
-        name: 'swiperItem',
+        name: 'swipeItem',
         data () {
             return {
-                offset: 0
+                offset: 0//由父组件swiper更新
             }
         },
         props: {},
@@ -25,9 +25,8 @@
             }
         },
         mounted(){
-            this.$parent.length++;//更新个数
+            this.$parent.swipes.push(this);//更新item个数
             //console.log(this.$refs.slide)
-            console.log(this)
         },
         filters: {}
     }

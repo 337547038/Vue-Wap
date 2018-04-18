@@ -1,11 +1,19 @@
 @charset "utf-8";
-.swiper-container{ width: 100%; overflow: hidden;
-  .swiper-wrapper{ height: px(200); overflow: hidden; }
+.swiper-container{ width: 100%; overflow: hidden; position: relative;
+  .swiper-wrapper{ height: px(200); overflow: hidden;
+    &:after{ content: ''; clear: both; display: inline-block; }
+  }
   .swiper-slide{ height: px(200); float: left;
     &:nth-child(1){ background: #04ab02 }
     &:nth-child(2){ background: #2d8cf0 }
     &:nth-child(3){ background: #795da3 }
     &:nth-child(4){ background: #969896 }
+    &:nth-child(5){ background: #eaffea }
   }
-  .swiper-pagination{ }
+  .swiper-pagination{
+    position: absolute; left: 0; bottom: 0; width: 100%; text-align: center; z-index: 10;
+    span{ display: inline-block; vertical-align: middle; width: 6px; height: 6px; border-radius: 50%; background: #fff; margin: 0 px(5);
+      &.swiper-pagination-active{ background: #f60 }
+    }
+  }
 }
