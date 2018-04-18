@@ -1,0 +1,10 @@
+@charset "utf-8";
+.footer-tab-bar{ height: px(100);
+  .tab-bar-fixed{ position: fixed; width: 100%; left: 0; bottom: 0; z-index: 50; background: #fff; border-top: 1px solid #ddd; display: flex;padding-top: px(10);
+    ul{ width: 100%; display: flex; }
+    li{ width: 100%; text-align: center; }
+    a{ display: block; width: 100%; font-size: px(24);
+      &:before{ display: block; font-size: px(50); margin: 0 auto; }
+    }
+  }
+}

@@ -27,5 +27,6 @@ module.exports = {
     tab: require('./tab'),
     badge: require('./badge'),
     pullRefreshLoading: require('./pullRefreshLoading'),
+    keyboard: require('./keyboard'),
     test: require('./test'),
 }

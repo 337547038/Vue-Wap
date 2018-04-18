@@ -1,8 +1,8 @@
 @charset "utf-8";
 .list-item{ @include height(90); border-bottom: 1px solid #ddd; overflow: hidden; display: flex; align-items: center; padding: 0 px(10);
   a{ width: 100%; align-items: center; display: inline-flex; }
-  .list-icon{ display: block; font-size: px(44); margin-right: px(5) }
-  .list-title{ flex: 2; font-size: px(36); }
+  .list-icon{ display: block; font-size: px(46); margin-right: px(10) }
+  .list-title{ flex: 2; font-size: px(30); }
   .list-slot{ }
   .list-arrow{ display: block; width: px(22); height: px(22); margin-right: px(10);
     border-top: 1px solid #999; border-right: 1px solid #999; transform: rotate(45deg);

@@ -1,7 +1,9 @@
 <!--Created by 337547038 on 2018/4/18.-->
 <template>
+    <Tabbar></Tabbar>
 </template>
 <script>
+    import Tabbar from '../components/tabbar/index'
     export default {
         name: 'tabbar',
         path:'/tabbar',
@@ -9,7 +11,7 @@
             return {}
         },
         props: {},
-        components: {},
+        components: {Tabbar},
         methods: {},
         computed: {},
         mounted(){

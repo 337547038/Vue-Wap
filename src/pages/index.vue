@@ -68,6 +68,10 @@
                         link: '/inputNumber'
                     },
                     {
+                        title:'Keyboard 数字虚拟键盘',
+                        link:'/keyboard'
+                    },
+                    {
                         title: 'List 列表',
                         link: '/list'
                     },
