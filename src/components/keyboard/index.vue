@@ -1,7 +1,8 @@
 <!--Created by 337547038 on 2018/4/17.-->
 <template>
     <div class="keyboard" @click="_click">
-        <div class="input-control" v-text="showValue?showValue:placeholder" :class="{'placeholder':value==''}"></div>
+        <div class="input-control" v-text="showValue?showValue:placeholder" :class="{'placeholder':value==''}"
+             ref="input"></div>
         <transition name="slide">
             <div class="keyboard-fixed" v-show="visible" ref="getHeight">
                 <div class="keyboard-control" v-text="confirmText" @click="_confirmClick"></div>
@@ -10,7 +11,7 @@
                     <a v-if="float" @click="_numClick('.')">.</a>
                     <a v-else></a>
                     <a @click="_numClick(0)">0</a>
-                    <a @click="_numDel">del</a>
+                    <a @click="_numDel" class="icon-delete"></a>
                 </div>
             </div>
         </transition>
@@ -24,6 +25,16 @@
                 visible: false,
                 keyboardHeight: 0
                 //newValue: this.value
+            }
+        },
+        watch: {
+            visible(v){
+                if (v) {
+                    this.$nextTick(()=> {
+                        this.keyboardHeight = this.$refs.getHeight.offsetHeight;
+                        this._setTranslate(this.$refs.input)
+                    });
+                }
             }
         },
         props: {
@@ -45,22 +56,43 @@
             maxLength: Number//允许输入的长度
         },
         mounted(){
+
         },
         components: {},
         methods: {
-            _click(){
+            _click(e){
                 this.visible = true;
-                this.$nextTick(()=> {
-                    this.keyboardHeight = this.$refs.getHeight.offsetHeight;
-                    this._setTranslate()
-                })
             },
-            _setTranslate(){
+            _setTranslate(el){
                 //计算偏移量
+                let wh = document.documentElement.clientHeight || document.body.clientHeight;//窗口高
+                let clientHeight = wh - this.keyboardHeight;//弹出键盘后窗口的高
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;//滚动条位置
+                //计算当前元素到浏览器顶部的距离
+                let componentRect = el.getBoundingClientRect();
+                let offsetTop = componentRect.top;
+                let elHeight = componentRect.height;
+                if (clientHeight < offsetTop + elHeight) {
+                    //表示被键盘挡住了
+                    //window.scrollTo(0, offsetTop - clientHeight + scrollTop + elHeight)//这效果太生硬
+                    //将body上移键盘的高度，有时往上移到时会偏上了
+                    let top = this.keyboardHeight;
+                    //向上移动后距离浏览器顶部距离，即太靠近顶部时，就偏移半个键盘的高
+                    if (offsetTop - top < clientHeight / 2) {
+                        top = top / 2;
+                    }
+                    let body = document.querySelector('#app');
+                    body.style.transition = 'all 300ms ease';
+                    //body.style.transform = `translate3d(0, -${top}px, 0)`;//transform会让fixed失败
+                    body.style.marginTop = -top + 'px';
+                    //body.style.position='relative'
+                }
             },
             _confirmClick(e){
                 this.visible = false;
                 this.confirmEvent ? this.confirmEvent(this.value) : "";
+                let body = document.querySelector('#app');
+                body.style.marginTop = '';
                 e.stopPropagation();
             },
             _numClick(item){
