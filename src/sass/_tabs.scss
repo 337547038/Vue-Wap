@@ -1,0 +1,25 @@
+@charset "utf-8";
+.tabs{
+  .tabs-nav{ display: flex;
+    .tabs-tab{ width: 100%; text-align: center; @include height(88); cursor: pointer;
+      &.active{ color: #04ab02; }
+    }
+  }
+  .tabs-content{ overflow: hidden; border: 1px solid #eee; padding: px(20); min-height: px(100);
+    .tab-pane{ display: none;
+      &.active{ display: block }
+    }
+  }
+}
+.tabs-fade-enter-active{ animation: tabs-fade .5s }
+.tabs-fade-leave-active{ opacity: 0 }
+@keyframes tabs-fade{
+  0%{ opacity: 0; }
+  100%{ opacity: 1; }
+}
+.tabs-slide-enter-active{ animation: tabs-slide .5s }
+.tabs-slide-leave-active{ opacity: 0 }
+@keyframes tabs-slide{
+  0%{ opacity: 0; transform: translateX(100%) }
+  100%{ opacity: 1; transform: translateX(0) }
+}
