@@ -1,6 +1,6 @@
 <!--Created by 337547038 on 2018/3/29.-->
 <template>
-    <div class="list-item">
+    <div class="list-item" @click="_click">
         <template v-if="href">
             <router-link :to="href">
                 <i :class="{['icon-'+icon]:icon}" v-if="icon" class="list-icon"></i>
@@ -38,7 +38,11 @@
         mounted(){
         },
         components: {},
-        methods: {},
+        methods: {
+            _click(e){
+                this.$emit('click', e);
+            }
+        },
         computed: {}
     }
 </script>

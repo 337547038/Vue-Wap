@@ -1,0 +1,15 @@
+@charset "utf-8";
+.pull-refresh-loading{ background: #eaffea;
+  .pull-refresh, .pull-loading{ text-align: center; @include height(60);
+    &.loading-loading{
+      //正在加载添加旋转图标
+      font-family: 'iconfont' !important;
+      &:before{ content: '\e67c'; font-size: px(36); display: inline-block; vertical-align: middle; animation: loadingrotate 1s infinite linear }
+    }
+  }
+  .pull-content{ }
+}
+@keyframes loadingrotate{
+  0%{ transform: rotate(0deg) }
+  100%{ transform: rotate(360deg) }
+}

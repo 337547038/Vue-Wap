@@ -7,8 +7,9 @@
         a{ color: #04ab02; }
       }
     }
-    a{ display: block; width: 100%; font-size: px(24);
+    a{ display: block; width: 100%; font-size: px(24); position: relative;
       &:before{ display: block; font-size: px(46); margin: 0 auto; }
     }
+    .badge{ right: px(40); top: px(-10); position: absolute; }
   }
 }

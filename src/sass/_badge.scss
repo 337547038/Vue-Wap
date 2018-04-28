@@ -1,0 +1,4 @@
+@charset "utf-8";
+.badge{ background: #04ab02; color: #fff; font-size: px(20); padding: 2px 3.5px; display: inline-block; vertical-align: middle; min-width: 8px; border-radius: 18px; line-height: 1.2; text-align: center;
+  &.badge-dot{ padding: 2px; min-width: inherit }
+  }

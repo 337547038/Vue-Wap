@@ -24,7 +24,7 @@
                 msg: 'Vue.js@2.5 components for mobile',
                 link: [
                     {
-                        title: 'Badge 消息提示 X',
+                        title: 'Badge 消息提示',
                         link: '/badge'
                     },
                     {
@@ -44,7 +44,7 @@
                         link: '/datePicker'
                     },
                     {
-                        title: 'Dialog 对话框 X',
+                        title: 'Dialog 对话框',
                         link: '/dialog'
                     },
                     {
@@ -76,7 +76,7 @@
                         link: '/list'
                     },
                     {
-                        title: 'Loading 加载 X',
+                        title: 'Loading 加载',
                         link: '/loading'
                     },
                     {
@@ -88,7 +88,7 @@
                         link: '/progress'
                     },
                     {
-                        title: 'Pull 下拉刷新上拉加载 X',
+                        title: 'Pull 下拉刷新上拉加载',
                         link: '/pull'
                     },
                     {
@@ -108,11 +108,11 @@
                         link: '/switch'
                     },
                     {
-                        title: 'tab 选项卡 X',
+                        title: 'tab 选项卡',
                         link: '/tab'
                     },
                     {
-                        title: 'tabbar 标签导航 X',
+                        title: 'tabbar 标签导航',
                         link: '/tabbar'
                     },
                     {

@@ -58,12 +58,13 @@
             <TabItem to="/" icon="icon-home">首页</TabItem>
             <TabItem to="/tabbar" :icon="['icon-fenlei2','icon-fenlei']" :active="true">分类</TabItem>
             <TabItem to="/" icon="icon-set">设置</TabItem>
-            <TabItem to="/" icon="icon-my">我的</TabItem>
+            <TabItem to="/" icon="icon-my">我的<Badge>20</Badge></TabItem>
         </TabBar>
     </div>
 </template>
 <script>
     import {TabBar, TabItem} from '../components/tabbar/index'
+    import Badge from '../components/badge/index'
     export default {
         name: 'tabbar',
         path: '/tabbar',
@@ -71,7 +72,7 @@
             return {}
         },
         props: {},
-        components: {TabBar, TabItem},
+        components: {TabBar, TabItem, Badge},
         methods: {},
         computed: {},
         mounted(){

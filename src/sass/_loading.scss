@@ -1,0 +1,17 @@
+@charset "utf-8";
+.loading{
+  &.normal{ font-family: 'iconfont'; display: inline-block;
+    &:before{ content: '\e67c'; animation: loading 1s infinite linear; border-radius: 50%; display: block; font-size: px(100) }
+  }
+  /*固定的*/
+  &.fixed{ position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 100; display: flex; align-items: center; justify-content: center;
+    .overlay{ background: rgba(0, 0, 0, .5); position: fixed; left: 0; top: 0; right: 0; bottom: 0; }
+    .loading-content{ width: px(150); height: px(150); background: #000; border-radius: px(10); display: flex; align-items: center; justify-content: center;
+      .loading-rotate{ animation: loading 1s infinite linear; border: 1px solid #fff; border-top-color: #f60; width: px(50); height: px(50); border-radius: 50%; display: block; }
+    }
+  }
+}
+@keyframes loading{
+  0%{ transform: rotate(0deg) }
+  100%{ transform: rotate(360deg) }
+}
