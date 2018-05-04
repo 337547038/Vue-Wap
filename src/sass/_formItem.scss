@@ -1,0 +1,6 @@
+@charset "utf-8";
+.form-group{ display: flex; border-bottom: 1px solid #ddd; overflow: hidden; align-items: center; @include height(90);
+  .label{ display: block; padding: 0 px(10); font-size: px(30) }
+  .input-box,.select-control{ flex: 2; }
+  .input-control{ border-color: transparent; }
+}

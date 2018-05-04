@@ -1,6 +1,6 @@
 <!--Created by 337547038 on 2018/4/26.-->
 <template>
-    <div class="dialog" v-if="!insertDialog">
+    <div class="dialog" v-if="!insertDialog" :class="{[className]:className}">
         <transition name="fade">
             <div class="overlay" v-if="maskLayer" v-show="visible2" @click="_maskClick"></div>
         </transition>
@@ -35,6 +35,7 @@
             }
         },
         props: {
+            className: String,
             maskLayer: {//显示遮罩层
                 type: Boolean,
                 default: true

@@ -1,8 +1,8 @@
 @charset "utf-8";
 /*样式非必须的，用于美观外观*/
-.radio-box{ cursor: pointer; display: flex; align-items: center;
+.radio-box{ cursor: pointer; display: inline-block; vertical-align: middle;
   input{ display: none; }
-  span{ display: block; }
+  span{ display: inline-block; vertical-align: middle; }
   .radio-inner{ border: 1px solid #666; width: 12px; height: 12px; border-radius: 50%; position: relative; margin-right: px(5);
     &:after{ content: " "; opacity: 0; background-color: #108ee9; border: 0; height: 6px; left: 3px; top: 3px; width: 6px; border-radius: 50%; position: absolute; transition: all .5s; transform: scale(0) }
   }
@@ -17,4 +17,6 @@
     }
   }
 }
-.radio-group{ display: inline-block; }
+.radio-group{ display: inline-block;
+  .radio-box{ margin-right: px(20) }
+}

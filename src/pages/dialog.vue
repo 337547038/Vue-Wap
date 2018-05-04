@@ -5,24 +5,31 @@
         <div class="demo">
             <h2>Use</h2>
             <pre>this.$dialog({content:'this is content'})</pre>
+            <p>一个dialog适用所有对话框窗口，只需要重写css样式即可</p>
             <List @click="_openDialog(1)">1.基本使用</List>
             <List @click="_openDialog(2)">2.带标题和按钮</List>
             <List @click="_openDialog(3)">3.按钮事件</List>
             <List @click="_openDialog(4)">4.带关闭按钮</List>
             <List @click="_openDialog(5)">5.自动关闭</List>
             <List @click="_openDialog(6)">6.过渡动画</List>
+            <List @click="_openDialog(7)">7.通过添加样式随意定位窗口位置</List>
             <h2>Use</h2>
             <p>也可以像普通组件的方法引用</p>
             <pre>import Dialog from '../components/dialog/dialog'</pre>
             <pre>&lt;Dialog :visible.sync="visible">this is content&lt;/Dialog></pre>
+            <List @click="visible=true">8.普通模式</List>
             <vDialog :visible.sync="visible">this is content</vDialog>
-            <List @click="visible=true">7.普通模式</List>
             <h2>API</h2>
             <table class="table-1">
                 <tr>
                     <th>参数</th>
                     <th>默认</th>
                     <th>说明</th>
+                </tr>
+                <tr>
+                    <td>className</td>
+                    <td>String</td>
+                    <td>添加不同的样式，也可以是class</td>
                 </tr>
                 <tr>
                     <td>maskLayer</td>
@@ -37,7 +44,7 @@
                 <tr>
                     <td>visible</td>
                     <td>Boolean|false</td>
-                    <td>显示或隐藏。通过sync同步</td>
+                    <td>显示或隐藏。通过sync同步。this.$dialog({})调用时不用传这参数</td>
                 </tr>
                 <tr>
                     <td>transition</td>
@@ -110,7 +117,8 @@
             _openDialog(index){
                 if (index == 1) {
                     this.$dialog({
-                        content: 'this is content'
+                        content: 'this is content',
+                        visible: true
                     });
                 } else if (index == 2) {
                     this.$dialog({
@@ -156,6 +164,12 @@
                         confirmText: 'confirm'
                     });
                 }
+                else if (index == 7) {
+                    this.$dialog({
+                        className: 'dialog-test',
+                        content: '一个dialog适用所有对话框窗口'
+                    });
+                }
             }
         },
         computed: {},
@@ -164,3 +178,7 @@
         filters: {}
     }
 </script>
+<style>
+    .dialog-test .dialog-flex{ display: block; bottom: auto }
+    .dialog-test .dialog-flex .dialog-body{ width: 100% }
+</style>
